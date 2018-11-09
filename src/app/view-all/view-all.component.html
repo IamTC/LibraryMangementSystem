@@ -1,0 +1,12 @@
+<div class="col-md-6 col-sm-12 mx-auto">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <div *ngFor="let book of books" class="card" >
+              <h5>{{book.title}}</h5>
+          </div>          
+        </div>        
+      </div>
+      <button type="submit" class="btn btn-primary">Return</button>
+    </form>
+  </div>

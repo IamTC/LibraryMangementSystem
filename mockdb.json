@@ -1,0 +1,299 @@
+{
+  "books": [
+      {
+          "title": "Book1",
+          "sector": "Sci-Fi",
+          "publDate": "10/10/1995",
+          "burrowedDate": "",
+          "reader": "",
+          "ISBN": "1a98e63984",
+          "authors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "publisher":"New Publiishers",
+          "pageCount":"1520" 
+      }, {
+          "title": "Book Somethuin",
+          "sector": "Novel",
+          "publDate": "05/11/1990",
+          "burrowedDate": "1/11/2018",
+          "reader": "RDR14",
+          "ISBN": "1a48w96a52",
+          "authors": [
+              {
+                  "name": "Someone",
+                  "Contact": "05465485"
+              },
+              {
+                  "name":"Anyone",
+                  "Contact":"05465485"
+              }
+          ],
+          "publisher":"Other Publishers",
+          "pageCount":"1020"
+      }, {
+          "title": "Book12",
+          "sector": "Sci-Fi",
+          "publDate": "10/10/1991",
+          "burrowedDate": "",
+          "reader": "",
+          "ISBN": "454as53w96",
+          "authors": [
+              {
+                  "name": "Samuel",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Jackson",
+                  "Contact":"00124565"
+              }
+          ],
+          "publisher":"Old Publiishers",
+          "pageCount":"100"
+      }, {
+          "title": "Book1as",
+          "sector": "Documentary",
+          "publDate": "10/10/2010",
+          "burrowedDate": "1/11/2018",
+          "reader": "RDR16",
+          "ISBN": "1a98e64984",
+          "authors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "publisher":"New Publiishers",
+          "pageCount":"1520"
+      }
+  ],
+  "overDraftedBooks": [        
+      {
+          "title": "OverDBook1",
+          "sector": "Documentary",
+          "publDate": "10/10/2010",
+          "burrowedDate": "10/10/2018",
+          "reader": "RDR18",
+          "ISBN": "1a98e63932",
+          "authors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "publisher":"New Publiishers",
+          "pageCount":"1520"
+      },
+      {
+          "title": "OverDBook2",
+          "sector": "Documentary",
+          "publDate": "10/10/2010",
+          "burrowedDate": "11/10/2018",
+          "reader": "RDR19",
+          "ISBN": "1a98e63945",
+          "authors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "publisher":"New Publiishers",
+          "pageCount":"1520"
+      }
+  ],
+  "DVDS": [
+      {
+          "title": "DVD1",
+          "sector": "Sci-Fi",
+          "publDate": "10/10/1995",
+          "burrowedDate": "",
+          "reader": "",
+          "ISBN": "1a98e63984",
+          "actors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "producer":"New Publiishers",
+          "duration":"2.40",
+          "subtitles":[
+              "english",
+              "chineese"
+          ],
+          "languages":[
+              "english",
+              "arabic"
+          ]
+      },
+      {
+          "title": "DVD2",
+          "sector": "Sci-Fi",
+          "publDate": "10/10/1995",
+          "burrowedDate": "",
+          "reader": "",
+          "ISBN": "1a98e63984",
+          "actors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "producer":"New Publiishers",
+          "duration":"2.40",
+          "subtitles":[
+              "english",
+              "chineese"
+          ],
+          "languages":[
+              "english",
+              "arabic"
+          ]
+      },
+      {
+          "title": "DVD3",
+          "sector": "Action",
+          "publDate": "10/10/1995",
+          "burrowedDate": "08/11/2018",
+          "reader": "RDR15",
+          "ISBN": "1a98e63984",
+          "actors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "producer":"New Publiishers",
+          "duration":"2.40",
+          "subtitles":[
+              "english",
+              "chineese"
+          ],
+          "languages":[
+              "english",
+              "arabic"
+          ]
+      }
+  ],
+  "odDVDS": [
+      {
+          "title": "DVD5",
+          "sector": "Action",
+          "publDate": "10/10/1995",
+          "burrowedDate": "08/11/2018",
+          "reader": "RDR15",
+          "ISBN": "1a98e63984",
+          "actors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "producer":"New Publiishers",
+          "duration":"2.40",
+          "subtitles":[
+              "english",
+              "chineese"
+          ],
+          "languages":[
+              "english",
+              "arabic"
+          ]        
+      },
+      {
+          "title": "DVD7",
+          "sector": "Action",
+          "publDate": "10/10/1995",
+          "burrowedDate": "08/11/2018",
+          "reader": "RDR17",
+          "ISBN": "1a98e63984",
+          "actors": [
+              {
+                  "name": "Thiwanka",
+                  "Contact": "00124565"
+              },
+              {
+                  "name":"Someone",
+                  "Contact":"00124565"
+              }
+          ],
+          "producer":"New Publiishers",
+          "duration":"2.40",
+          "subtitles":[
+              "english",
+              "chineese"
+          ],
+          "languages":[
+              "english",
+              "arabic"
+          ]        
+      }
+  ],
+  "readers":[
+      {
+          "name":"Anyone",
+          "ID":"RDR14",
+          "address":"asdjaksda"
+      },
+      {
+          "name":"Jacksonasd",
+          "ID":"RDR15",
+          "address":"asdjaksda"            
+      },
+      {
+          "name":"Samuelasda",
+          "ID" :"RDR16",
+          "address":"asdasda asda"
+      },
+      {
+          "name":"Thiwanasdaka",
+          "ID":"RDR17",
+          "address":"asdac asda"
+      },
+      {
+          "name":"asda",
+          "ID":"RDR18",
+          "address":"asdasda asda"
+      },
+      {
+          "name":"asda",
+          "ID":"RDR19",
+          "address":"asas as"
+      }
+  ]
+}

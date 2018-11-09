@@ -1,0 +1,131 @@
+<div class="col-md-6 col-sm-12 mx-auto">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{'active': typeToAdd == 'book'}" (click)="toggleView('book')">Add Book</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [ngClass]="{'active': typeToAdd == 'DVD'}" (click)="toggleView('DVD')">Add DVD</a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-6 col-sm-12 mx-auto" *ngIf="typeToAdd === 'book'">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="bookTitle">Title</label>
+        <input type="text" class="form-control" id="bookTitle" placeholder="Title">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="bookIsbn">ISBN</label>
+        <input type="text" class="form-control" id="bookIsbn" placeholder="ISBN">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="bookSector">Sector</label>
+        <select id="bookSector" class="form-control">
+          <option selected>Choose...</option>
+          <option>Novels</option>
+          <option>Science</option>
+          <option>Sci-Fi</option>
+          <option>Documentary</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="bookPublDate">Published Date</label>
+        <input type="date" class="form-control" id="bookPublDate" placeholder="">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="bookAuthor">Author</label>
+        <input type="text" class="form-control" id="bookAuthor" placeholder="Author">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="bookPublisher">Publisher</label>
+        <input type="text" class="form-control" id="bookPublisher" placeholder="Publisher">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="pageCount">Page Count</label>
+        <input type="number" class="form-control" id="pageCount" placeholder="Page Count">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+
+<div class="col-md-6 col-sm-12 mx-auto" *ngIf="typeToAdd === 'DVD'">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="dvdTitle">Title</label>
+        <input type="text" class="form-control" id="dvdTitle" placeholder="Title">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="dvdIsbn">ISBN</label>
+        <input type="text" class="form-control" id="dvdIsbn" placeholder="ISBN">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="dvdSector">Sector</label>
+        <select id="dvdSector" class="form-control">
+          <option selected>Choose...</option>
+          <option>Novels</option>
+          <option>Science</option>
+          <option>Sci-Fi</option>
+          <option>Documentary</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="dvdPublDate">Published Date</label>
+        <input type="date" class="form-control" id="dvdPublDate" placeholder="">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="dvdProducer">Producer</label>
+        <input type="text" class="form-control" id="dvdProducer" placeholder="Producer">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="availLanguages">Available Languages</label>
+        <input type="text" class="form-control" id="availLanguages" placeholder="List Languages">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="availSubtitles">Available Subtitles</label>
+        <input type="text" class="form-control" id="availSubtitles" placeholder="List Subtitles">
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="actors">Actors</label>
+          <input type="text" class="form-control" id="actors" placeholder="List Actors">
+        </div>
+      </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="publisher">Publisher</label>
+        <input type="text" class="form-control" id="publisher" placeholder="Publisher">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="duration">Duration</label>
+        <input type="text" class="form-control" id="duration" placeholder="Duration">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
