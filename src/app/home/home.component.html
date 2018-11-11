@@ -1,36 +1,62 @@
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-sm">
-      <div class="card" >
-        <a class="card-body text-center bg-primary text-light item-links" [routerLink]="['add-item']" >Add Item</a>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="card" >
-        <a class="card-body text-center bg-primary text-light item-links" [routerLink]="['delete-item']">Remove Item</a>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="card" >
-        <a class="card-body text-center bg-primary text-light item-links" [routerLink]="['view-all']">View Items</a>
-      </div>
-    </div>
-  </div>
-  <div class="row mt-5">
-    <div class="col-sm">
-      <div class="card">
-        <a class="card-body text-center bg-primary text-light item-links" [routerLink]="['lend-item']">Lend Item</a>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="card" >
-        <a class="card-body text-center bg-primary text-light item-links" [routerLink]="['return-item']">Return Item</a>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="card" >
-        <a class="card-body text-center bg-primary text-light item-links" [routerLink]="['report']">Genereate Report</a>
-      </div>
-    </div>
-  </div>
+<div class="homeView">
+
+  <mat-grid-list cols="3" rowHeight="2:1" gutterSize="2px">
+    <mat-grid-tile>
+      <mat-card [routerLink]="['lend-item']" class="actionCard">
+        <mat-card-content>
+          <!-- <i class="material-icons">
+                assignment_return
+                </i>
+          <a class="card-body text-center bg-primary text-light item-links">Lend Item </a>       
+            -->
+          <button mat-mini-fab color="primary"> <i class="material-icons">
+              assignment_return
+            </i>
+            </button>
+            <a class="card-body text-center bg-primary text-light item-links">Lend Item </a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card [routerLink]="['return-item']" class="actionCard">
+        <mat-card-content>
+          <a class="card-body text-center bg-primary text-light item-links">Return Item</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card [routerLink]="['add-item']" class="actionCard">
+        <mat-card-content>
+          <a class="card-body text-center bg-primary text-light item-links">Add Item</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card [routerLink]="['delete-item']" class="actionCard">
+        <mat-card-content>
+          <a class="card-body text-center bg-primary text-light item-links">Delete Item</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card [routerLink]="['view-all']" class="actionCard">
+        <mat-card-content>
+          <a class="card-body text-center bg-primary text-light item-links">View Items</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card [routerLink]="['report']" class="actionCard">
+        <mat-card-content>
+          <a class="card-body text-center bg-primary text-light item-links">Genereate Report</a>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
 </div>

@@ -1,12 +1,26 @@
-<div class="col-md-6 col-sm-12 mx-auto">
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <div *ngFor="let book of books" class="card" >
-              <h5>{{book.title}}</h5>
-          </div>          
-        </div>        
-      </div>
-      <button type="submit" class="btn btn-primary">Return</button>
-    </form>
-  </div>
+<div class="viewAll">
+  <mat-card *ngFor="let book of books">
+    <mat-card-header>
+      <mat-card-title>{{book.title}}</mat-card-title>
+      <mat-card-subtitle>{{book.sector}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      {{book.publDate}}
+    </mat-card-content>
+    <mat-card-content>
+      {{book.burrowedDate}}
+    </mat-card-content>
+    <mat-card-content>
+      {{book.reader}}
+    </mat-card-content>
+    <mat-card-content>
+      {{book.authors.name}}
+    </mat-card-content>
+    <mat-card-content>
+      {{book.publisher}}
+    </mat-card-content>
+    <mat-card-content>
+      {{book.pageCount}}
+    </mat-card-content>
+  </mat-card>
+</div>

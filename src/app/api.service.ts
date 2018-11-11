@@ -29,7 +29,7 @@ export class ApiService {
 
   public getAllODBooks() : Observable<Book[]> {
     return this.http
-    .get( '/overDraftedBooks')
+    .get( '/api/overDraftedBooks')
     .pipe(map(response=> {
       const books = response.json();
       return books.map((book) => new Book(book))
@@ -39,7 +39,7 @@ export class ApiService {
 
   public getAllDVDs() : Observable<DVD[]> {
     return this.http
-    .get( '/dvds')
+    .get( '/api/dvds')
     .pipe(map(response=> {
       const dvds = response.json();
       return dvds.map((dvd) => new DVD(dvd))
@@ -49,7 +49,7 @@ export class ApiService {
 
   public getAllODDVDs() : Observable<DVD[]> {
     return this.http
-    .get( '/odDVDS')
+    .get( '/api/odDVDS')
     .pipe(map(response=> {
       const dvds = response.json();
       return dvds.map((dvd) => new DVD(dvd))
@@ -59,7 +59,7 @@ export class ApiService {
 
   public getAllReaders() : Observable<Reader[]> {
     return this.http
-    .get( '/readers')
+    .get( '/api/readers')
     .pipe(map(response=> {
       const readers = response.json();
       return readers.map((reader) => new Reader(reader))

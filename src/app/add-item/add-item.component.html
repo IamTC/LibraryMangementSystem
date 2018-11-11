@@ -1,131 +1,95 @@
-<div class="col-md-6 col-sm-12 mx-auto">
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{'active': typeToAdd == 'book'}" (click)="toggleView('book')">Add Book</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [ngClass]="{'active': typeToAdd == 'DVD'}" (click)="toggleView('DVD')">Add DVD</a>
-    </li>
-  </ul>
-</div>
+<div>
+  <mat-tab-group class="addItemForm">
+    <mat-tab label="Add Book">
+      <form class="actionForm">
+        <mat-form-field>
+          <input matInput id="bookTitle" placeholder="Enter Book Title">
+        </mat-form-field>
 
-<div class="col-md-6 col-sm-12 mx-auto" *ngIf="typeToAdd === 'book'">
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="bookTitle">Title</label>
-        <input type="text" class="form-control" id="bookTitle" placeholder="Title">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="bookIsbn">ISBN</label>
-        <input type="text" class="form-control" id="bookIsbn" placeholder="ISBN">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="bookSector">Sector</label>
-        <select id="bookSector" class="form-control">
-          <option selected>Choose...</option>
-          <option>Novels</option>
-          <option>Science</option>
-          <option>Sci-Fi</option>
-          <option>Documentary</option>
-        </select>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="bookPublDate">Published Date</label>
-        <input type="date" class="form-control" id="bookPublDate" placeholder="">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="bookAuthor">Author</label>
-        <input type="text" class="form-control" id="bookAuthor" placeholder="Author">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="bookPublisher">Publisher</label>
-        <input type="text" class="form-control" id="bookPublisher" placeholder="Publisher">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="pageCount">Page Count</label>
-        <input type="number" class="form-control" id="pageCount" placeholder="Page Count">
-      </div>
-    </div>
+        <mat-form-field>
+          <input matInput id="bookIsbn" placeholder="Enter ISBN">
+        </mat-form-field>
 
-    <button type="submit" class="btn btn-primary">Add</button>
-  </form>
-</div>
+        <mat-form-field>
+          <mat-select placeholder="Select Sector">
+            <mat-option [value]="'Novels'">Novels</mat-option>
+            <mat-option [value]="'Novels'">Novels</mat-option>
+            <mat-option [value]="'Novels'">Novels</mat-option>
+          </mat-select>
+        </mat-form-field>
 
-<div class="col-md-6 col-sm-12 mx-auto" *ngIf="typeToAdd === 'DVD'">
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="dvdTitle">Title</label>
-        <input type="text" class="form-control" id="dvdTitle" placeholder="Title">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="dvdIsbn">ISBN</label>
-        <input type="text" class="form-control" id="dvdIsbn" placeholder="ISBN">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="dvdSector">Sector</label>
-        <select id="dvdSector" class="form-control">
-          <option selected>Choose...</option>
-          <option>Novels</option>
-          <option>Science</option>
-          <option>Sci-Fi</option>
-          <option>Documentary</option>
-        </select>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="dvdPublDate">Published Date</label>
-        <input type="date" class="form-control" id="dvdPublDate" placeholder="">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="dvdProducer">Producer</label>
-        <input type="text" class="form-control" id="dvdProducer" placeholder="Producer">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="availLanguages">Available Languages</label>
-        <input type="text" class="form-control" id="availLanguages" placeholder="List Languages">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="availSubtitles">Available Subtitles</label>
-        <input type="text" class="form-control" id="availSubtitles" placeholder="List Subtitles">
-      </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-12">
-          <label for="actors">Actors</label>
-          <input type="text" class="form-control" id="actors" placeholder="List Actors">
-        </div>
-      </div>
+        <mat-form-field>
+          <input matInput [matDatepicker]="publDateBook" placeholder="Publication date">
+          <mat-datepicker-toggle matSuffix [for]="publDateBook"></mat-datepicker-toggle>
+          <mat-datepicker #publDateBook></mat-datepicker>
+        </mat-form-field>
 
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="publisher">Publisher</label>
-        <input type="text" class="form-control" id="publisher" placeholder="Publisher">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="duration">Duration</label>
-        <input type="text" class="form-control" id="duration" placeholder="Duration">
-      </div>
-    </div>
+        <mat-form-field>
+          <input matInput placeholder="Enter Author">
+        </mat-form-field>
 
-    <button type="submit" class="btn btn-primary">Add</button>
-  </form>
+        <mat-form-field>
+          <input matInput placeholder="Enter Publisher">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="number" placeholder="Page Count">
+        </mat-form-field>
+
+        <button mat-icon-button style="width:40px">
+          <button mat-fab color="primary">Add <i class="material-icons">add</i></button>
+        </button>
+      </form>
+    </mat-tab>
+
+    <mat-tab label="Add DVD">
+        <form class="actionForm">
+          <mat-form-field>
+            <input matInput id="dvdTitle" placeholder="Enter DVD Title">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput id="dvdIsbn" placeholder="Enter ISBN">
+          </mat-form-field>
+  
+          <mat-form-field>
+            <mat-select placeholder="Select Sector">
+              <mat-option [value]="'Novels'">Novels</mat-option>
+              <mat-option [value]="'Novels'">Novels</mat-option>
+              <mat-option [value]="'Novels'">Novels</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput [matDatepicker]="dvdPublDate" placeholder="Published date">
+            <mat-datepicker-toggle matSuffix [for]="dvdPublDate"></mat-datepicker-toggle>
+            <mat-datepicker #dvdPublDate></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput placeholder="Enter Producer">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Available Languages">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Available Subtitles">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Enter Actors">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Enter Duration">
+          </mat-form-field>
+
+          <button mat-icon-button style="width:40px">
+            <button mat-fab color="primary">Add <i class="material-icons">add</i></button>
+          </button>
+        </form>
+      </mat-tab>
+  </mat-tab-group>
 </div>
